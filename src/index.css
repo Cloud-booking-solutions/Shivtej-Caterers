@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 22 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 260 70% 75%;  /* Updated to purple hue */
+    --primary-foreground: 30 33% 98%;
+
+    --secondary: 260 30% 92%; /* Updated to match purple theme */
+    --secondary-foreground: 260 70% 75%;
+
+    --muted: 260 10% 92%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 260 40% 92%;
+    --accent-foreground: 260 70% 75%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 10% 80%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 260 70% 75%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for the catering website */
+.menu-category {
+  @apply mb-12;
+}
+
+.menu-item {
+  @apply border border-spice-brown/20 rounded-lg p-4 transition-all hover:shadow-md hover:bg-secondary/50;
+}
+
+.social-sidebar {
+  @apply fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 p-3 rounded-r-lg z-40;
+}
+
+.call-button {
+  @apply fixed bottom-6 right-6 bg-spice-red text-white rounded-full p-3 flex items-center justify-center shadow-lg z-50 hover:bg-spice-red/90 transition-transform hover:scale-105;
+}
+
+/* Background image styles for each page */
+.bg-page {
+  @apply relative;
+}
+
+.bg-page::before {
+  content: '';
+  @apply absolute inset-0 bg-cover bg-center bg-fixed opacity-20 -z-10; /* Increased opacity from 10% to 20% */
+  background-color: rgba(0, 0, 0, 0.05); /* Adding a slight dark overlay to improve visibility */
+}
+
+.bg-home::before {
+  background-image: url('https://images.unsplash.com/photo-1605192214263-bcd412361ba8?q=80&w=1000&auto=format&fit=crop');
+}
+
+.bg-about::before {
+  background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1000&auto=format&fit=crop');
+}
+
+.bg-services::before {
+  background-image: url('https://images.unsplash.com/photo-1509358271058-acd22cc93898?q=80&w=1000&auto=format&fit=crop');
+}
+
+.bg-menu::before {
+  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop');
+}
+
+.bg-contact::before {
+  background-image: url('https://images.unsplash.com/photo-1528747045269-390fe33c19f2?q=80&w=1000&auto=format&fit=crop');
+}
+
+.bg-book::before {
+  background-image: url('https://images.unsplash.com/photo-1514907283155-ea5f4094c70c?q=80&w=1000&auto=format&fit=crop');
+}
+
+.bg-not-found::before {
+  background-image: url('https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?q=80&w=1000&auto=format&fit=crop');
+}
