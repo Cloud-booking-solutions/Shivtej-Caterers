@@ -41,7 +41,7 @@ const Home = () => {
             <div className="md:w-1/2 mt-8 md:mt-0">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://formalyonconseil.com/wp-content/uploads/2021/07/waiter-serving-table-restaurant-preparing-receive-guests.png" 
+                  src="https://plus.unsplash.com/premium_photo-1687089576444-b55b5b6d9268?blend=000000&blend-alpha=10&blend-mode=normal&blend-w=1&crop=faces%2Cedges&h=630&mark=https:%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&w=1200&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzIyNjc1NzY4fA&ixlib=rb-4.0.3" 
                   alt="Indian Feast Catering" 
                   className="w-full h-auto"
                 />
