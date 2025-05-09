@@ -94,7 +94,7 @@ const teamMembers = [
     id: 1,
     name: "Rajesh Kumar",
     role: "Founder & Executive Chef",
-    image: "https://www.forbesindia.com/media/images/2022/Dec/img_199417_sanjay-vazirani_900x600.jpg"
+    image: "https://thumbs.dreamstime.com/b/happy-male-indian-chef-toque-cooking-profession-people-concept-over-grey-background-150504087.jpg"
   },
   {
     id: 2,

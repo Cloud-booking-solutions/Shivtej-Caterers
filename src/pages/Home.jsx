@@ -3,6 +3,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import buffet1 from '../assets/buffet1.png';
+import buffet2 from '../assets/buffet2.png';
+import buffet3 from '../assets/buffet3.png';
+import buffet4 from '../assets/buffet4.png';
+import buffet5 from '../assets/buffet5.png';
+import buffet6 from '../assets/buffet6.png';
+import buffet7 from '../assets/buffet7.png';
+import buffet8 from '../assets/buffet8.png';
+import buffet9 from '../assets/buffet9.png';
+
 
 const Home = () => {
   return (
@@ -31,7 +41,7 @@ const Home = () => {
             <div className="md:w-1/2 mt-8 md:mt-0">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://formalyonconseil.com/wp-content/uploads/2021/07/waiter-serving-table-restaurant-preparing-receive-guests.jpg" 
+                  src="https://formalyonconseil.com/wp-content/uploads/2021/07/waiter-serving-table-restaurant-preparing-receive-guests.png" 
                   alt="Indian Feast Catering" 
                   className="w-full h-auto"
                 />
@@ -68,6 +78,31 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+                {/* Buffet Section */}
+<section className="py-16 bg-muted/10">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">Buffet Options</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {buffetItems.map((item) => (
+        <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <img 
+            src={item.image} 
+            alt={item.title} 
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-4">
+            <h3 className="text-xl font-semibold text-center text-spice-brown">{item.title}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Testimonials */}
       <section className="py-16 bg-spice-brown/10">
@@ -137,14 +172,14 @@ const services = [
     title: "Corporate Events",
     description: "Impress your clients and colleagues with our professional catering services for business meetings and events.",
     icon: <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
-    image: "https://www.brillianteventsinc.com/wp-content/uploads/2019/05/event_cater_fi.jpg"
+    image: "https://www.brillianteventsinc.com/wp-content/uploads/2019/05/event_cater_fi.png"
   },
   {
     id: 3,
     title: "Private Parties",
     description: "Celebrate birthdays, anniversaries, or any special occasion with our customized catering options.",
     icon: <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
-    image: "https://www.thelightsapphire.com/wp-content/uploads/2016/08/Private-Party-01.jpg"
+    image: "https://www.thelightsapphire.com/wp-content/uploads/2016/08/Private-Party-01.png"
   }
 ];
 
@@ -155,14 +190,14 @@ const testimonials = [
     name: "Priya Sharma",
     rating: 5,
     text: "Indian Feast catered my wedding and the food was absolutely amazing! Our guests are still talking about the butter chicken and naan.",
-    image: "https://as2.ftcdn.net/v2/jpg/05/73/43/47/1000_F_573434786_u5oTtQo07UomjUEkpx8OP57jwDW8nZDL.jpg"
+    image: "https://as2.ftcdn.net/v2/png/05/73/43/47/1000_F_573434786_u5oTtQo07UomjUEkpx8OP57jwDW8nZDL.png"
   },
   {
     id: 2,
     name: "Raj Kumar",
     rating: 5,
     text: "We hired Indian Feast for our corporate event and they were incredibly professional. The variety of options accommodated everyone's dietary preferences.",
-    image: "https://thumbs.dreamstime.com/b/indian-men-portrait-emotional-young-business-man-isolated-white-background-42019159.jpg"
+    image: "https://thumbs.dreamstime.com/b/indian-men-portrait-emotional-young-business-man-isolated-white-background-42019159.png"
   },
   {
     id: 3,
@@ -172,5 +207,49 @@ const testimonials = [
     image: "https://media.istockphoto.com/photos/business-man-picture-id618360638?k=6&m=618360638&s=612x612&w=0&h=N4KE6fP2uqJyES6dSpsx-0Ty02E-iDqQ5x8zBjZLJJs="
   }
 ];
+
+
+const buffetItems = [
+  {
+    id: 1,
+    // title: "North Indian Buffet",
+    image: buffet1,
+  },
+  {
+    id: 2,
+    // title: "South Indian Buffet",
+    image: buffet2,
+  },
+  // {
+  //   id: 3,
+  //   // title: "Fusion Buffet",
+  //   image: buffet3,
+  // },
+  // {
+  //   id: 4,
+  //   image: buffet4,
+  // },
+  {
+    id: 5,
+    image: buffet5,
+  },
+  {
+    id: 6,
+    image: buffet6,
+  },
+  {
+    id: 7,
+    image: buffet7,
+  },
+  // {
+  //   id: 8,
+  //   image: buffet8,
+  // },
+  // {
+  //   id: 9,
+  //   image: buffet9,
+  // },
+];
+
 
 export default Home;

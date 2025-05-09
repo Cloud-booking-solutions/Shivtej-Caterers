@@ -319,7 +319,7 @@ const riceItems = [
     // price: "60",
     description: "Soft and buttery leavened bread baked in tandoor.",
     // spiceLevel: 0,
-    image: "https://rbiryaniadda.us/wp-content/uploads/2020/08/Butter-Naan-1-675x675.jpg"
+    image: "https://cdn.urbanpiper.com/media/bizmedia/2021/10/20/Butter_naan_COMPRESSED.jpg"
   },
   {
     id: 29,

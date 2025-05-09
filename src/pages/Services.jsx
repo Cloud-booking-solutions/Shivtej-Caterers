@@ -3,6 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import buffet1 from '../assets/buffet1.png';
+import buffet2 from '../assets/buffet2.png';
+import buffet3 from '../assets/buffet3.png';
+import buffet4 from '../assets/buffet4.png';
+import buffet5 from '../assets/buffet5.png';
+import buffet6 from '../assets/buffet6.png';
+import buffet7 from '../assets/buffet7.png';
+import buffet8 from '../assets/buffet8.png';
+import buffet9 from '../assets/buffet9.png';
 
 const Services = () => {
   return (
@@ -114,6 +123,30 @@ const Services = () => {
           ))}
         </div>
       </section>
+
+
+
+                    {/* Buffet Section */}
+<section className="py-16 bg-muted/10">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">Buffet Options</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {buffetItems.map((item) => (
+        <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <img 
+            src={item.image} 
+            alt={item.title} 
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-4">
+            <h3 className="text-xl font-semibold text-center text-spice-brown">{item.title}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Pricing */}
       <section className="mb-16">
@@ -407,6 +440,49 @@ const pricingPlans = [
     ],
     popular: false
   }
+];
+
+
+const buffetItems = [
+  {
+    id: 1,
+    // title: "North Indian Buffet",
+    image: buffet1,
+  },
+  {
+    id: 2,
+    // title: "South Indian Buffet",
+    image: buffet2,
+  },
+  // {
+  //   id: 3,
+  //   // title: "Fusion Buffet",
+  //   image: buffet3,
+  // },
+  // {
+  //   id: 4,
+  //   image: buffet4,
+  // },
+  {
+    id: 5,
+    image: buffet5,
+  },
+  {
+    id: 6,
+    image: buffet6,
+  },
+  {
+    id: 7,
+    image: buffet7,
+  },
+  // {
+  //   id: 8,
+  //   image: buffet8,
+  // },
+  // {
+  //   id: 9,
+  //   image: buffet9,
+  // },
 ];
 
 export default Services;
